@@ -6,7 +6,7 @@ local function send_ping()
     m:publish(config.ENDPOINT .. "ping","id=" .. config.ID,0,0)
 end
 
--- Sends a simple ping to the broker
+-- Sends temperature to the broker
 local function send_temperature()
     pin = 5
     status,temp,humi,temp_decimial,humi_decimial = dht.readxx(pin)
